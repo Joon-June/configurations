@@ -1,0 +1,16 @@
+set number
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
+set backspace=indent,eol,start
+set nocompatible
+syntax on
+set ruler
+set visualbell
+set encoding=utf-8
+set ai
+set si
+set wrap
+set tabstop=4
+set shiftwidth=4
+set smarttab
+
