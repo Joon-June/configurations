@@ -1,16 +1,13 @@
-set number
-inoremap <Char-0x07F> <BS>
-nnoremap <Char-0x07F> <BS>
-set backspace=indent,eol,start
-set nocompatible
-syntax on
-set ruler
-set visualbell
-set encoding=utf-8
-set ai
-set si
-set wrap
+" Syntax Highlighting
+if has("syntax")
+    syntax on
+endif
+set nu
 set tabstop=4
 set shiftwidth=4
+set ai
+set si
+set cindent
 set smarttab
-
+set encoding=utf-8
+colorscheme jellybeans
