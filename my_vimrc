@@ -10,4 +10,5 @@ set si
 set cindent
 set smarttab
 set encoding=utf-8
+set clipboard=unnamed
 colorscheme jellybeans
