@@ -1,39 +1,62 @@
 // Place your key bindings in this file to override the defaults
-[
+[   
+    // multi-cursor
     {
-        "key": "ctrl+u l",
-        "command": "-editor.action.transformToUppercase",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "alt+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+l",
-        "command": "editor.action.transformToLowercase"
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+u",
-        "command": "editor.action.transformToUppercase",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "alt+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+u u",
-        "command": "-editor.action.transformToUppercase",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
     },
+
+    // delete line
     {
-        "key": "ctrl+o",
-        "command": "-workbench.action.files.openFile"
+        "key": "shift+cmd+k",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+o",
-        "command": "workbench.action.output.toggleOutput"
-    },
-    {
-        "key": "ctrl+shift+u",
-        "command": "-workbench.action.output.toggleOutput"
-    },
+
+    // move line down
     {
         "key": "shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // move line up
+    {
+        "key": "shift+alt+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // copy line above
+    {
+        "key": "shift+cmd+up",
+        "command": "editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -41,24 +64,98 @@
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
+    
+    // copy line down
     {
-        "key": "shift+alt+right",
-        "command": "editor.action.indentLines",
+        "key": "shift+cmd+down",
+        "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+]",
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // uppercase
+    {
+        "key": "cmd+u",
+        "command": "editor.action.transformToUppercase"
+    },
+
+    // lowercase
+    {
+        "key": "cmd+l",
+        "command": "editor.action.transformToLowercase"
+    },
+
+    // go forwarfd
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+
+    // go back
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+
+    // indent
+    {
+        "key": "tab",
         "command": "-editor.action.indentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+alt+left",
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // outdent
+    {
+        "key": "shift+tab",
         "command": "editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+[",
+        "key": "cmd+[",
         "command": "-editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
-    }
+    },
+
+    // go to line
+    {
+        "key": "shift+cmd+l",
+        "command": "workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+
+    // copy active file path
+    {
+        "key": "alt+cmd+c",
+        "command": "copyFilePath",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+k alt+cmd+c",
+        "command": "-copyFilePath",
+        "when": "editorFocus"
+    }    
 ]
