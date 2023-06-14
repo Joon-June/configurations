@@ -3,8 +3,9 @@
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 3,
 	"workbench.editor.enablePreview": false,
-	"markdown-preview-enhanced.previewTheme": "github-dark.css"
+	"markdown-preview-enhanced.previewTheme": "github-dark.css",
 	"workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
-    }
+    },
+	"editor.semanticHighlighting.enabled": true
 }
