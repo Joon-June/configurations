@@ -7,5 +7,7 @@
 	"workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     },
-	"editor.semanticHighlighting.enabled": true
+	"editor.semanticHighlighting.enabled": true,
+	"editor.fontSize": 13,
+    "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace"
 }
