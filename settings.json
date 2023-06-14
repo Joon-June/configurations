@@ -2,17 +2,18 @@
     "editor.renderWhitespace": "none",
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 3,
-	"workbench.editor.enablePreview": false,
-	"markdown-preview-enhanced.previewTheme": "github-dark.css",
-	"workbench.editorAssociations": {
+    "workbench.editor.enablePreview": false,
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     },
-	"editor.semanticHighlighting.enabled": true,
-	"editor.fontSize": 13,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.fontSize": 13,
     "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace",
-	"workbench.editor.tabSizing": "shrink",
+    "workbench.editor.tabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
-    "workbench.editor.showTabs": false,
-	"workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 8
+    "workbench.editor.showTabs": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 5,
+    "workbench.editor.limit.perEditorGroup": true
 }
