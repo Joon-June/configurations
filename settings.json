@@ -12,5 +12,7 @@
     "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace",
 	"workbench.editor.tabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+	"workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 8
 }
