@@ -153,3 +153,4 @@ function gitp() {
 
 alias vd="vimdiff -c 'set diffopt+=iwhite' -c 'syntax on'"
 alias g="git"
+alias gs="git status"
