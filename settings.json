@@ -9,5 +9,8 @@
     },
 	"editor.semanticHighlighting.enabled": true,
 	"editor.fontSize": 13,
-    "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace",
+	"workbench.editor.tabSizing": "shrink",
+    "workbench.editor.tabCloseButton": "right",
+    "workbench.editor.showTabs": false
 }
