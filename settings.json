@@ -1,5 +1,7 @@
 {
     "editor.renderWhitespace": "none",
     "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 3
+    "indentRainbow.lightIndicatorStyleLineWidth": 3,
+	"workbench.editor.enablePreview": false,
+	"markdown-preview-enhanced.previewTheme": "github-dark.css"
 }
