@@ -178,9 +178,13 @@
         "when": "viewContainer.workbench.view.explorer.enabled"
     },
     {
-        "key": "cmd+e",
+        "key": "shift+cmd+d",
         "command": "workbench.files.action.focusOpenEditorsView",
         "when": "workbench.explorer.openEditorsView.active"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "outline.focus"
     },
     {
         "key": "cmd+k e",
