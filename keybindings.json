@@ -294,6 +294,10 @@
     {
         "key": "cmd+3",
         "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "alt+cmd+m",
+        "command": "workbench.action.toggleMultiCursorModifier"
     }
 ]
 
