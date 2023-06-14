@@ -145,7 +145,7 @@ unset __conda_setup
 
 alias jn="jupyter notebook" 
 
-function gp() {
+function gitp() {
     git add "$1"
     git commit -m "update"
     git push
