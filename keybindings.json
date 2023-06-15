@@ -314,13 +314,8 @@
 
     // trigger suggest
     {
-        "key": "cmd+p",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
-    },
-    {
         "key": "cmd+i",
-        "command": "-editor.action.triggerSuggest",
+        "command": "editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     }
 ]
