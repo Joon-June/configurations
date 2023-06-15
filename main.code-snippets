@@ -17,7 +17,7 @@
 	// }
 	"python-main": {
 		"prefix": ["main"],
-		"body": ["if __name__ == \"__main__\":\n"],
+		"body": ["if __name__ == \"__main__\":", "\t"],
 		"description": "main for python"
 	}
 }
