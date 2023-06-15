@@ -299,13 +299,29 @@
         "key": "cmd+3",
         "command": "-workbench.action.focusThirdEditorGroup"
     },
+
+    // multi-currsor modifier
     {
         "key": "alt+cmd+m",
         "command": "workbench.action.toggleMultiCursorModifier"
     },
+
+    // compare selected
     {
         "key": "cmd+k s",
         "command": "compareSelected"
+    },
+
+    // trigger suggest
+    {
+        "key": "cmd+p",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     }
 ]
 
