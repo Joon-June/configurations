@@ -329,6 +329,16 @@
         "key": "alt+f12",
         "command": "-editor.action.peekDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+
+    // python run / debug
+    {
+        "key": "shift+f5",
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "shift+f6",
+        "command": "python.debugInTerminal"
     }
 ]
 
