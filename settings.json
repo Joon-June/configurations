@@ -16,15 +16,24 @@
     "workbench.editor.enablePreview": false,
     
     "python.formatting.provider": "yapf",
-    "python.formatting.yapfArgs": ["--style", "{based_on_style: pep8, indent_width: 4}"],
+    "python.formatting.yapfArgs": [
+        "--style", 
+        "{based_on_style: pep8, indent_width: 4}"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8CategorySeverity.E": "Error",
+    "python.linting.flake8CategorySeverity.W": "Warning",
+    "python.linting.flake8CategorySeverity.F": "Warning",
+    "python.linting.flake8Args": [
+        "--max-line-length=92",
+        "--exclude = .git,__pycache__,__init__.py,.mypy_cache,.pytest_cache,alembic/*,temp_*"
+    ],
 
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 3,
 
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    }
+    "markdown-preview-enhanced.previewTheme": "github-dark.css"
 }
 
 
