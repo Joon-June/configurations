@@ -1,15 +1,11 @@
 {
     "editor.renderWhitespace": "none",
-    "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 3,
-    "workbench.editor.enablePreview": false,
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "workbench.editorAssociations": {
-        "*.md": "vscode.markdown.preview.editor"
-    },
     "editor.semanticHighlighting.enabled": true,
     "editor.fontSize": 13,
     "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace",
+    "editor.formatOnSave": false,
+
+    "workbench.editorAssociations": {"*.md": "vscode.markdown.preview.editor"},
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.showTabs": true,
@@ -17,7 +13,18 @@
     "workbench.editor.limit.value": 5,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.revealIfOpen": true,
+    "workbench.editor.enablePreview": false,
+    
     "python.formatting.provider": "yapf",
-    "python.formatting.yapfArgs": ["--style", "{based_on_style: chromium, indent_width: 2}"]
+    "python.formatting.yapfArgs": ["--style", "{based_on_style: pep8, indent_width: 4}"],
+
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 3,
+
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
 }
+
 
