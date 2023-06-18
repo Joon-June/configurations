@@ -117,9 +117,9 @@ alias ce='conda env'
 alias jj='ssh joon@joonjune.iptime.org'
 alias py='python'
 alias st=streamlit
-alias sv101='ssh -i /Users/joonsu/workspace/learners/learners.pem learners@192.168.0.101 -p 22'
+alias sv212='ssh -i /Users/joonsu/workspace/learners/learners.pem learners@192.168.0.212 -p 22'
 alias sv213='ssh learners@192.168.0.213 -p 22'
-alias svd101='ssh root@192.168.0.101 -p 4009'
+alias svd212='ssh root@192.168.0.212 -p 4009'
 alias svd213='ssh root@192.168.0.213 -p 4009'
 
 POWERLEVEL9K_CUSTOM_INFO='echo LOCAL'
@@ -156,4 +156,9 @@ alias g="git"
 alias gs="git status"
 alias gd="git diff"
 alias gc="git commit"
+alias gcm"git commit -m"
 alias ga="git add"
+alias gp="git push"
+
+alias ngrok="/Users/joonsu/Downloads/ngrok"
+
