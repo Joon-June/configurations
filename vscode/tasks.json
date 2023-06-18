@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "python format with trailing comma",
+            "label": "python format all in one",
             "type": "shell",
-            "command": "source ${HOME}/.zshrc; add-trailing-comma ${file}; black ${file}; add-trailing-comma ${file}; black ${file}",
+            "command": "source ${HOME}/.zshrc; conda activate base; autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place --exclude=__init__.py ${file}; isort ${file} --profile black; add-trailing-comma ${file}; black ${file}; add-trailing-comma ${file}; black ${file}",
             "presentation": {
                 "reveal": "never",
                 "echo": false,
