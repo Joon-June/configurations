@@ -1,5 +1,5 @@
 // Place your key bindings in this file to override the defaults
-[   
+[
     // multi-cursor
     {
         "key": "alt+up",
@@ -21,14 +21,12 @@
         "command": "-editor.action.insertCursorBelow",
         "when": "editorTextFocus"
     },
-
     // delete line
     {
         "key": "shift+cmd+k",
         "command": "editor.action.deleteLines",
         "when": "textInputFocus && !editorReadonly"
     },
-
     // move line down
     {
         "key": "shift+alt+down",
@@ -40,7 +38,6 @@
         "command": "-editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     // move line up
     {
         "key": "shift+alt+up",
@@ -52,7 +49,6 @@
         "command": "-editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     // copy line above
     {
         "key": "shift+cmd+up",
@@ -64,7 +60,6 @@
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-    
     // copy line down
     {
         "key": "shift+cmd+down",
@@ -76,19 +71,16 @@
         "command": "-editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     // uppercase
     {
         "key": "cmd+u",
         "command": "editor.action.transformToUppercase"
     },
-
     // lowercase
     {
         "key": "cmd+l",
         "command": "editor.action.transformToLowercase"
     },
-
     // go forwarfd
     {
         "key": "cmd+]",
@@ -100,7 +92,6 @@
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
-
     // go back
     {
         "key": "cmd+[",
@@ -112,7 +103,6 @@
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
     },
-
     // go to definition
     {
         "key": "cmd+b",
@@ -124,7 +114,6 @@
         "command": "-editor.action.revealDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
-
     // indent
     {
         "key": "tab",
@@ -136,7 +125,6 @@
         "command": "-editor.action.indentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     // outdent
     {
         "key": "shift+tab",
@@ -148,7 +136,6 @@
         "command": "-editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     // go to line
     {
         "key": "shift+cmd+l",
@@ -158,7 +145,6 @@
         "key": "ctrl+g",
         "command": "-workbench.action.gotoLine"
     },
-
     // copy active file path
     {
         "key": "alt+cmd+c",
@@ -170,7 +156,6 @@
         "command": "-copyFilePath",
         "when": "editorFocus"
     },
-
     // editor related
     {
         "key": "cmd+shift+e",
@@ -299,26 +284,22 @@
         "key": "cmd+3",
         "command": "-workbench.action.focusThirdEditorGroup"
     },
-
     // multi-currsor modifier
     {
         "key": "alt+cmd+m",
         "command": "workbench.action.toggleMultiCursorModifier"
     },
-
     // compare selected
     {
         "key": "cmd+k s",
         "command": "compareSelected"
     },
-
     // trigger suggest
     {
         "key": "cmd+i",
         "command": "editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     },
-
     // peek definition
     {
         "key": "shift+cmd+i",
@@ -330,7 +311,6 @@
         "command": "-editor.action.peekDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
-
     // python run / debug
     {
         "key": "shift+f5",
@@ -340,7 +320,6 @@
         "key": "shift+f6",
         "command": "python.debugInTerminal"
     },
-
     // format document
     {
         "key": "cmd+alt+k",
@@ -352,7 +331,6 @@
         "command": "-editor.action.formatDocument",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
-
     // format selection
     {
         "key": "cmd+alt+l",
@@ -364,7 +342,6 @@
         "command": "-editor.action.formatSelection",
         "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
     },
-    
     // format with trailing comma
     {
         "key": "cmd+alt+j",
@@ -372,4 +349,3 @@
         "args": "python format all in one"
     }
 ]
-
