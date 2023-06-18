@@ -8,7 +8,7 @@ destination_file="./zshrc"
 if [ -f "$source_file" ]; then
     # Copy the file to the destination
     cp "$source_file" "$destination_file"
-    echo "Backedup ~/.zshrc"
+    echo "Backedup ${HOME}/.zshrc"
 else
     echo "$source_file' does not exist."
 fi
