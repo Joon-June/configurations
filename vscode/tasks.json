@@ -4,7 +4,7 @@
         {
             "label": "python format with trailing comma",
             "type": "shell",
-            "command": "source ${HOME}/.zshrc; black ${file}; add-trailing-comma ${file}; black ${file}",
+            "command": "source ${HOME}/.zshrc; add-trailing-comma ${file}; black ${file}; add-trailing-comma ${file}; black ${file}",
             "presentation": {
                 "reveal": "never",
                 "echo": false,
