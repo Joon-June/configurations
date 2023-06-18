@@ -16,15 +16,6 @@
     "workbench.editor.enablePreview": false,
     
     "python.formatting.provider": "black",
-    "python.formatting.yapfArgs": [
-        "--exclude", ".git/*",
-        "--exclude", "__pycache__/*",
-        "--exclude", "**/__init__.py",
-        "--exclude", ".mypycache/*",
-        "--exclude", ".pytest_cache/*",
-        "--style", 
-        "{ based_on_style: pep8, align_closing_bracket_with_visual_indent: false, allow_split_before_default_or_named_assigns: false, blank_line_before_nested_class_or_def: false, column_limit: 88, continuation_align_style: SPACE, dedent_closing_brackets: true, indent_closing_brackets: false, force_multiline_dict: true, indent_dictionary_value: true, indent_width: 4, join_multiple_lines: false, spaces_around_dict_delimiters: false, spaces_before_comment: 2, split_arguments_when_comma_terminated: true, split_before_dict_set_generator: false, split_before_dot: true, split_before_expression_after_opening_paren: true, split_before_logical_operator: true, split_complex_comprehension: true, split_penalty_after_opening_bracket: 0, split_penalty_comprehension: 2100, split_penalty_for_added_line_split: 0, split_penalty_import_names: 0, split_penalty_logical_operator: 0 }"
-    ],
     
     "flake8.args": [
         "--max-line-length=88",
