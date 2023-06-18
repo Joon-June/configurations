@@ -369,7 +369,7 @@
     {
         "key": "cmd+alt+j",
         "command": "workbench.action.tasks.runTask",
-        "args": "python format with trailing comma"
+        "args": "python format all in one"
     }
 ]
 
