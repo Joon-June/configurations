@@ -161,4 +161,4 @@ alias ga="git add"
 alias gp="git push"
 
 alias ngrok="/Users/joonsu/Downloads/ngrok"
-
+alias cdconf="cd /Users/joonsu/workspace/personal/configurations"
