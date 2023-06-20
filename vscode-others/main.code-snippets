@@ -19,5 +19,10 @@
 		"prefix": ["main"],
 		"body": ["if __name__ == \"__main__\":", "\t"],
 		"description": "main for python"
+	},
+	"projet-dir": {
+		"prefix": ["proj_dir"],
+		"body": ["PROJ_DIR = \"osp.dirname(osp.abspath(__file__))\""],
+		"description": "project directory"
 	}
 }
