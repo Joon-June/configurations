@@ -22,7 +22,7 @@
 	},
 	"projet-dir": {
 		"prefix": ["proj_dir"],
-		"body": ["PROJ_DIR = \"osp.dirname(osp.abspath(__file__))\""],
+		"body": ["PROJ_DIR = osp.dirname(osp.abspath(__file__))"],
 		"description": "project directory"
 	}
 }
