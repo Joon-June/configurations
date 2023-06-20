@@ -24,5 +24,10 @@
 		"prefix": ["proj_dir"],
 		"body": ["PROJ_DIR = osp.dirname(osp.abspath(__file__))"],
 		"description": "project directory"
+	},
+	"os-imports": {
+		"prefix": ["oss"],
+		"body": ["import os.path as osp\nfrom os.path import join as ospj"],
+		"description": "import os related things"
 	}
 }
