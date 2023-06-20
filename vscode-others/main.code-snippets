@@ -27,7 +27,7 @@
 	},
 	"os-imports": {
 		"prefix": ["oss"],
-		"body": ["import os.path as osp\nfrom os.path import join as ospj"],
+		"body": ["import os\nimport os.path as osp\nfrom os.path import join as ospj"],
 		"description": "import os related things"
 	}
 }
