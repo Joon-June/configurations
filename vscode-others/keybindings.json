@@ -291,8 +291,12 @@
     },
     // compare selected
     {
-        "key": "cmd+k s",
-        "command": "compareSelected"
+        "key": "cmd+k c",
+        "command": "extension.partialDiff.diffSelectionWithClipboard"
+    },
+    {
+        "key": "cmd+k c",
+        "command": "-workbench.files.action.compareWithClipboard"
     },
     // trigger suggest
     {
@@ -346,7 +350,7 @@
         "key": "shift+cmd+c",
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
-    }
+    },
 
     // format document
     {
