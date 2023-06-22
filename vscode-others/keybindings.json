@@ -379,6 +379,18 @@
         "key": "cmd+alt+j",
         "command": "workbench.action.tasks.runTask",
         "args": "python format all in one"
+    },
+    // rename symbol
+    {
+        "key": "cmd+r",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     }
+
 ]
 
