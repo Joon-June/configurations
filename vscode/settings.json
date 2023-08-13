@@ -14,7 +14,7 @@
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.showTabs": true,
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 5,
+    "workbench.editor.limit.value": 7,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.revealIfOpen": true,
     "workbench.editor.enablePreview": false,
