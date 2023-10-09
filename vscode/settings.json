@@ -42,5 +42,12 @@
     "indentRainbow.lightIndicatorStyleLineWidth": 3,
 
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
+	"github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+    },
+    "github.copilot.editor.enableAutoCompletions": false,
 }
 
