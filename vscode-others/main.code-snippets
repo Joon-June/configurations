@@ -29,5 +29,10 @@
 		"prefix": ["oss"],
 		"body": ["import os\nimport os.path as osp\nfrom os.path import join as ospj"],
 		"description": "import os related things"
+	},
+	"path-relateds": {
+		"prefix": ["pp"],
+		"body": ["import os\nimport os.path as osp\nfrom os.path import join as ospj\nfrom glob import glob\n from tqdm import tqdm"],
+		"description": "all path related stuff"
 	}
 }
