@@ -26,9 +26,18 @@ ARG PIP_INSTALL="python -m pip --no-cache-dir install"
 
 RUN $PIP_INSTALL black isort flake8 autoflake add-trailing-comma
 RUN $PIP_INSTALL numpy
-RUN $PIP_INSTALL torch torchvision torchaudio
+RUN $PIP_INSTALL torch==1.13.0+cu116 torchvision==0.14.0+cu116 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu116
 RUN $PIP_INSTALL setuptools==59.6.0
 RUN $PIP_INSTALL albumentations==1.1.0 opencv-python==4.7.0.72
+RUN $PIP_INSTALL tensorboard==2.11.0
+RUN $PIP_INSTALL pytorch-lightning==1.8.6
+RUN $PIP_INSTALL diffusers==0.10.0
+RUN $PIP_INSTALL ftfy==6.1.1
+RUN $PIP_INSTALL scipy==1.9.3
+RUN $PIP_INSTALL transformers==4.25.1
+RUN $PIP_INSTALL accelerate==0.14.0
+RUN $PIP_INSTALL bitsandbytes==0.35.4
+RUN $PIP_INSTALL omegaconf==2.3.0
 
 
 # Install oh-my-zsh & p10k
