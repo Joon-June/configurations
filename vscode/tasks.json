@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "python format all in one",
+            "label": "black",
             "type": "shell",
             "command": "source ${HOME}/.zshrc; conda activate base; autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place --exclude=__init__.py ${file}; isort ${file} --profile black; add-trailing-comma ${file}; black ${file}; add-trailing-comma ${file}; black ${file}",
             "presentation": {
@@ -10,7 +10,16 @@
                 "echo": false,
                 "panel": "shared"
             }
-        }
+        },
+        {
+            "label": "ruff",
+            "type": "shell",
+            "command": "source ${HOME}/.zshrc; conda activate base; ruff check --fix .; ruff format ${file}",
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "panel": "shared"
+            }
+        },
     ]
 }
-
