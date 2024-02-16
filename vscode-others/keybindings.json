@@ -378,7 +378,7 @@
     {
         "key": "cmd+alt+j",
         "command": "workbench.action.tasks.runTask",
-        "args": "python format all in one"
+        "args": "ruff"
     },
     // rename symbol
     {
@@ -419,4 +419,3 @@
     }
 
 ]
-
