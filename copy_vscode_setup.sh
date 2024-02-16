@@ -13,6 +13,7 @@ if [[ $destination == *":"* ]]; then
     echo "Copying to remote destination: $destination"
     scp -r ./vscode $destination/.vscode
 	scp ./ruff/ruff.toml $destination/ruff.toml
+
 else
     echo "Copying to local destination: $destination"
     cp -r ./.vscode $destination
