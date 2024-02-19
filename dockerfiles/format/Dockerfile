@@ -24,7 +24,7 @@ RUN rm get-pip.py
 # Install Python libraries
 ARG PIP_INSTALL="python -m pip --no-cache-dir install"
 
-RUN $PIP_INSTALL black isort flake8 autoflake add-trailing-comma
+RUN $PIP_INSTALL ruff 
 RUN $PIP_INSTALL numpy
 RUN $PIP_INSTALL torch torchvision torchaudio
 RUN $PIP_INSTALL setuptools==59.6.0
