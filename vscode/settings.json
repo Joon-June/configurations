@@ -9,8 +9,8 @@
 
     "workbench.colorTheme": "Monokai Pro (Filter Machine)",
     "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
-    "workbench.editorAssociations": {
-        "*.md": "vscode.markdown.preview.editor"
+	"workbench.editorAssociations": {
+        "*.md": "markdown-preview-enhanced"
     },
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.tabCloseButton": "right",
