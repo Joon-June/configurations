@@ -4,7 +4,7 @@
     "editor.renderWhitespace": "none",
     "editor.semanticHighlighting.enabled": true,
     "editor.fontSize": 12,
-    "editor.fontFamily": "Inter, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "Inter, MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
     "editor.formatOnSave": false,
 
     "workbench.colorTheme": "Monokai Pro (Filter Machine)",
