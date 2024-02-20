@@ -37,16 +37,16 @@ RUN chsh -s $(which zsh)
 RUN git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
 RUN echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc \
-    && echo "POWERLEVEL9K_CUSTOM_INFO='echo server_info: 161-dbth'" >> ~/.zshrc \
+    && echo "POWERLEVEL9K_CUSTOM_INFO='echo server_info: [SERVER_INFO]'" >> ~/.zshrc \
     && echo "POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)" >> ~/.zshrc \
-    && echo "POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(custom_info)" >> ~/.zshrc \
+    && echo "POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(custom_info time)" >> ~/.zshrc \
     && echo "POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'" >> ~/.zshrc
 
 
 # SSH Settings
 RUN sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g"  /etc/ssh/sshd_config
 RUN sed -i "s/#Port 22/Port 4009/g" /etc/ssh/sshd_config
-RUN echo "root:PASSWD" | chpasswd
+RUN echo "root:[PASSWD]" | chpasswd
 
 
 # ngrok
