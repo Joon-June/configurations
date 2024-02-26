@@ -2,6 +2,8 @@
 - Python
 - indent-rainbow
 - Git Graph
+- Git Blame
+- gitignore
 - Monokai Pro 
 - Markdown Preview Enhanced
 - Ruff 
