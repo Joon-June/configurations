@@ -82,7 +82,8 @@ ignore = [
     "PTH204",
     "PTH205",
     "PTH206",
-    "PTH207"
+    "PTH207",
+    "ERA001",
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
