@@ -51,6 +51,38 @@ ignore = [
     "S311",    # https://docs.astral.sh/ruff/rules/suspicious-non-cryptographic-random-usage/
     "T20",     # https://docs.astral.sh/ruff/rules/#flake8-print-t20
 	"W292",
+    "PTH100",
+    "PTH101",
+    "PTH102",
+    "PTH103",
+    "PTH104",
+    "PTH105",
+    "PTH106",
+    "PTH107",
+    "PTH108",
+    "PTH109",
+    "PTH110",
+    "PTH111",
+    "PTH112",
+    "PTH113",
+    "PTH114",
+    "PTH115",
+    "PTH116",
+    "PTH117",
+    "PTH118",
+    "PTH119",
+    "PTH120",
+    "PTH121",
+    "PTH122",
+    "PTH123",
+    "PTH124",
+    "PTH201",
+    "PTH202",
+    "PTH203",
+    "PTH204",
+    "PTH205",
+    "PTH206",
+    "PTH207"
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
@@ -73,3 +105,4 @@ skip-magic-trailing-comma = false
 
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
+
