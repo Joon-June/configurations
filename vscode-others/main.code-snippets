@@ -25,14 +25,9 @@
 		"body": ["PROJ_DIR = osp.dirname(osp.abspath(__file__))"],
 		"description": "project directory"
 	},
-	"os-imports": {
-		"prefix": ["oss"],
-		"body": ["import os\nimport os.path as osp\nfrom os.path import join as ospj"],
-		"description": "import os related things"
-	},
 	"path-relateds": {
-		"prefix": ["pp"],
-		"body": ["import os\nimport os.path as osp\nfrom os.path import join as ospj\nfrom glob import glob\n from tqdm import tqdm"],
+		"prefix": ["oss"],
+		"body": ["import os\nimport os.path as osp\nfrom glob import glob\nfrom os.path import join as ospj\n\nfrom tqdm import tqdm"],
 		"description": "all path related stuff"
 	}
 }
