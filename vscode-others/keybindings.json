@@ -332,7 +332,7 @@
         "command": "python.execInTerminal-icon"
     },
     {
-        "key": "shift+f6",
+        "key": "f6",
         "command": "workbench.action.debug.start",
         "when": "debuggersAvailable && debugState == 'inactive'"
     },
