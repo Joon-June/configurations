@@ -14,7 +14,7 @@
         {
             "label": "ruff",
             "type": "shell",
-            "command": "source ${HOME}/.zshrc; conda activate base; ruff check --fix .; ruff format ${file}",
+            "command": "source ${HOME}/.zshrc; conda activate base; ruff check --fix ${file}; ruff format ${file}",
             "presentation": {
                 "reveal": "never",
                 "echo": false,
