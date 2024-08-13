@@ -9,7 +9,7 @@ RUN apt-get install -y apt-utils
 RUN apt-get install -y build-essential
 RUN apt-get install -y sudo
 RUN apt-get install -y python3.10
-RUN apt-get install -y python3.10-distutils
+RUN apt-get install -y python3-distutils
 RUN apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender-dev bmon iotop g++
 RUN apt-get install -y git ca-certificates htop curl wget net-tools zsh ssh openssh-server fonts-powerline vim zip ffmpeg
 
