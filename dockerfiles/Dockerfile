@@ -36,11 +36,11 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
 RUN chsh -s $(which zsh)
 RUN git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
-RUN echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc \
-    && echo "POWERLEVEL9K_CUSTOM_INFO='echo server_info: [SERVER_INFO]'" >> ~/.zshrc \
+RUN echo "function prompt_device_info() { p10k segment -t 'server_info: $SERVER_NAME ($SERVER_INFO)]' -b 4 -f 'black'}" >> ~/.zshrc \
+    && echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc \
+    && echo "POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'" >> ~/.zshrc \
     && echo "POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)" >> ~/.zshrc \
-    && echo "POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(custom_info time)" >> ~/.zshrc \
-    && echo "POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'" >> ~/.zshrc
+    && echo "POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(device_info time)" >> ~/.zshrc
 
 
 # SSH Settings
