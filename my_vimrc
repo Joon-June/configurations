@@ -1,14 +1,81 @@
-" Syntax Highlighting
+" Ensure Vim is not in compatible mode with vi
+set nocompatible
+
+" Disable file type detection initially for plugin loading
+filetype off
+
+" Turn on syntax highlighting if available
 if has("syntax")
     syntax on
 endif
-set nu
-set tabstop=4
-set shiftwidth=4
-set ai
-set si
-set cindent
-set smarttab
-set encoding=utf-8
-set clipboard=unnamed
+
+" Enable file type detection, plugins, and indentation
+filetype plugin indent on
+
+" General settings
+set nu                 " Show line numbers
+set ruler              " Show file stats
+set visualbell         " Blink cursor on error instead of beeping
+set encoding=utf-8     " Set encoding to UTF-8
+set clipboard=unnamed  " Use system clipboard
+set hidden             " Allow hidden buffers
+set ttyfast            " Enable fast terminal rendering
+set laststatus=2       " Always show status line
+set showmode           " Show current mode
+set showcmd            " Show incomplete commands
+
+" Security settings
+set modelines=0        " Disable modelines
+
+" Whitespace and indentation
+set tabstop=4          " Number of spaces for a tab
+set shiftwidth=4       " Number of spaces to use for autoindent
+set softtabstop=4      " Number of spaces that a <Tab> counts for in insert mode
+set ai                 " Auto-indentation
+set si                 " Smart indentation
+set cindent            " C-style indentation
+set smarttab           " Smarter tab settings
+set expandtab          " Use spaces instead of tabs
+set wrap               " Enable line wrapping
+set textwidth=88       " Set maximum text width
+set formatoptions=tcqrn1  " Formatting options
+set noshiftround       " Don't round indent to multiple of 'shiftwidth'
+
+" Cursor motion and scrolling
+set scrolloff=3        " Keep 3 lines visible above/below cursor
+set backspace=indent,eol,start  " Allow backspace in insert mode
+set matchpairs+=<:>    " Add angle brackets to % matching
+
+" Key mappings for better navigation
+nnoremap j gj
+nnoremap k gk
+
+" Enhanced search settings
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch           " Highlight search results
+set incsearch          " Incremental search
+set ignorecase         " Ignore case in search
+set smartcase          " Override ignorecase if uppercase used in search
+set showmatch          " Show matching parentheses
+map <leader><space> :let @/=''<cr> " Clear search highlighting
+
+" Remap help key to toggle fullscreen
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+nnoremap <F1> :set invfullscreen<CR>
+vnoremap <F1> :set invfullscreen<CR>
+
+" Visualizing whitespace
+set listchars=tab:▸\ ,eol:¬
+" Uncomment this to enable by default:
+" set list " To enable by default
+" Or use your leader key + l to toggle on/off
+map <leader>l :set list!<CR> " Toggle tabs and EOL
+
+" Color scheme and rendering
 colorscheme jellybeans
+
+" TODO: Pick a leader key
+" let mapleader = ","
+
+" Additional settings and plugins can be added below
