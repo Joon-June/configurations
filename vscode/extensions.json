@@ -1,0 +1,18 @@
+{
+	"recommendations": [
+        "mhutchie.git-graph",
+		"charliermarsh.ruff",
+        "oderwat.indent-rainbow",
+        "tamasfe.even-better-toml",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "wholroyd.jinja",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "shd101wyy.markdown-preview-enhanced",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "donjayamanne.python-extension-pack",
+        "ryu1kn.partial-diff"   
+	]
+}
