@@ -44,6 +44,7 @@ ignore = [
     "B905",  # no strict parameter for zip
     "E501",  # line too long, handled by black
     "C901",  # too complex
+	"W293",
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
