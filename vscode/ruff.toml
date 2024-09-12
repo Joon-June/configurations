@@ -31,76 +31,25 @@ indent-width = 4
 target-version = "py311"
 
 [lint]
-select = ["ALL"]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
 ignore = [
-    "ANN101",  # https://docs.astral.sh/ruff/rules/missing-type-self/
-    "ANN204",  # https://docs.astral.sh/ruff/rules/missing-return-type-special-method/
-    "COM812",  # https://docs.astral.sh/ruff/rules/missing-trailing-comma/
-    "D100",    # https://docs.astral.sh/ruff/rules/undocumented-public-module/
-    "D102",    # https://docs.astral.sh/ruff/rules/undocumented-public-method/
-    "D104",    # https://docs.astral.sh/ruff/rules/undocumented-public-package/
-    "D105",    # https://docs.astral.sh/ruff/rules/undocumented-magic-method/
-    "D107",    # https://docs.astral.sh/ruff/rules/undocumented-public-init/
-    "D203",    # https://docs.astral.sh/ruff/rules/one-blank-line-before-class/
-    "D213",    # https://docs.astral.sh/ruff/rules/multi-line-summary-second-line/
-    "D407",    # https://docs.astral.sh/ruff/rules/dashed-underline-after-section/
-    "EXE002",  # https://docs.astral.sh/ruff/rules/shebang-missing-executable-file/
-    "N812",    # https://docs.astral.sh/ruff/rules/lowercase-imported-as-non-lowercase/
-    "PLR0913", # https://docs.astral.sh/ruff/rules/too-many-arguments/
-    "S101",    # https://docs.astral.sh/ruff/rules/assert/
-    "S311",    # https://docs.astral.sh/ruff/rules/suspicious-non-cryptographic-random-usage/
-    "T20",     # https://docs.astral.sh/ruff/rules/#flake8-print-t20
-	"W292",
-    "PTH100",
-    "PTH101",
-    "PTH102",
-    "PTH103",
-    "PTH104",
-    "PTH105",
-    "PTH106",
-    "PTH107",
-    "PTH108",
-    "PTH109",
-    "PTH110",
-    "PTH111",
-    "PTH112",
-    "PTH113",
-    "PTH114",
-    "PTH115",
-    "PTH116",
-    "PTH117",
-    "PTH118",
-    "PTH119",
-    "PTH120",
-    "PTH121",
-    "PTH122",
-    "PTH123",
-    "PTH124",
-    "PTH201",
-    "PTH202",
-    "PTH203",
-    "PTH204",
-    "PTH205",
-    "PTH206",
-    "PTH207",
-    "ERA001",
-    "ANN001",
-    "ANN201",
-    "D103",
-    "NPY002",
-    "D101",
-    "RET504",
-    "B905",
-    "W293",
-    "PLW2901",
-	"S113",
-    "S301"
+    "B008",  # do not perform function calls in argument defaults
+    "B905",  # no strict parameter for zip
+    "E501",  # line too long, handled by black
+    "C901",  # too complex
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
-extend-safe-fixes = ["F841"]
+extend-safe-fixes = []
 
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
@@ -117,4 +66,5 @@ skip-magic-trailing-comma = false
 
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
+
 
