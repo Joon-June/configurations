@@ -23,5 +23,6 @@ echo "function prompt_device_info() { p10k segment -t 'server_info: $SERVER_NAME
 && echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc \
 && echo "POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'" >> ~/.zshrc \
 && echo "POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)" >> ~/.zshrc \
-&& echo "POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(device_info time)" >> ~/.zshrc
+&& echo "POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(device_info time)" >> ~/.zshrc \
+&& echo "POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT=true" >> ~/.zshrc
 echo "DONE setting up p10k variables!"
