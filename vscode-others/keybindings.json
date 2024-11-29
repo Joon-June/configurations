@@ -11,7 +11,7 @@
         "command": "-editor.action.insertCursorAbove",
         "when": "editorTextFocus"
     },
-    {
+        {
         "key": "alt+down",
         "command": "editor.action.insertCursorBelow",
         "when": "editorTextFocus"
@@ -300,12 +300,6 @@
     },
     // trigger suggest
     {
-        "key": "cmd+i",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
-    },
-    // trigger parameter hint
-    {
         "key": "shift+cmd+i",
         "command": "editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
@@ -374,7 +368,7 @@
         "command": "-editor.action.formatSelection",
         "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
     },
-    // format with trailing comma
+    // format with ruff
     {
         "key": "cmd+alt+j",
         "command": "workbench.action.tasks.runTask",
@@ -417,17 +411,7 @@
         "command": "-workbench.action.terminal.new",
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
-	{
-        "key": "shift+cmd+c",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
     {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-	{
         "key": "cmd+i",
         "command": "-editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
@@ -436,5 +420,14 @@
         "key": "cmd+i",
         "command": "inlineChat.start",
         "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
-    }
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
+    },
 ]
+
