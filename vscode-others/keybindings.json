@@ -385,22 +385,6 @@
         "command": "-editor.action.rename",
         "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
-	// copilots
-    {
-        "key": "alt+[",
-        "command": "github.copilot.previousPanelSolution",
-        "when": "github.copilot.activated && github.copilot.panelVisible"
-    },
-    {
-        "key": "alt+]",
-        "command": "github.copilot.nextPanelSolution",
-        "when": "github.copilot.activated && github.copilot.panelVisible"
-    },
-    {
-        "key": "alt+\\",
-        "command": "editor.action.inlineSuggest.trigger",
-        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
-    },
 	{
         "key": "cmd+t",
         "command": "workbench.action.terminal.new",
@@ -412,16 +396,6 @@
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
-        "key": "cmd+i",
-        "command": "-editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
-    },
-    {
-        "key": "cmd+i",
-        "command": "inlineChat.start",
-        "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
-    },
-    {
         "key": "shift+cmd+c",
         "command": "workbench.action.togglePanel"
     },
@@ -429,5 +403,50 @@
         "key": "cmd+j",
         "command": "-workbench.action.togglePanel"
     },
+    {
+        "key": "shift+cmd+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "cmd+k",
+        "command": "aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-composer.createNewChat",
+        "when": "focusedView == 'workbench.panel.aichat.view'"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-composer.createNew",
+        "when": "focusedView == 'workbench.panel.composerViewPane2.view'"
+    },
+    {
+        "key": "cmd+n",
+        "command": "composer.createNew",
+    },
+    // {
+    //     "key": "cmd+i",
+    //     "command": "composer.createNewChat",
+    // },
+    // {
+    //     "key": "cmd+i",
+    //     "command": "composer.openAsPane"
+    // }
+    {
+        "key": "cmd+i",
+        "command": "composer.openChatAsEditor"
+    }
 ]
 
