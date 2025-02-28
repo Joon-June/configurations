@@ -447,6 +447,10 @@
     {
         "key": "cmd+i",
         "command": "composer.openChatAsEditor"
+    },
+	{
+        "key": "cmd+g",
+        "command": "git-graph.view"
     }
 ]
 
