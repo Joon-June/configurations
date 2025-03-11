@@ -10,6 +10,7 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
-        "ryu1kn.partial-diff"   
+        "ryu1kn.partial-diff",   
+		"mechatroner.rainbow-csv"
 	]
 }
