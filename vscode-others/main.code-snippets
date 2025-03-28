@@ -29,5 +29,10 @@
 		"prefix": ["oss"],
 		"body": ["import os\nimport os.path as osp\nfrom glob import glob\nfrom os.path import join as ospj\n\nfrom tqdm import tqdm"],
 		"description": "all path related stuff"
+	},
+	"env": {
+		"prefix": ["env"],
+		"body": ["from dotenv import load_dotenv\nload_dotenv()"],
+		"description": ["load dotenv"]
 	}
 }
