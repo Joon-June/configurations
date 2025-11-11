@@ -51,5 +51,6 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true
-    }
+    },
+	"editor.inlayHints.enabled": "off"
 }
