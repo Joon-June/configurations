@@ -6,18 +6,15 @@
     "editor.fontSize": 12,
 	"editor.fontFamily": "Inter, MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
     "editor.formatOnSave": false,
-	"editor.snippetSuggestions": "top",
+    "editor.snippetSuggestions": "top",
     "editor.suggestSelection": "recentlyUsed",
     "editor.suggest.showWords": false,
     "editor.suggest.showKeywords": false,
 
     "workbench.colorTheme": "Monokai Pro (Filter Machine)",
     "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
-	"workbench.editorAssociations": {
-        "*.md": "markdown-preview-enhanced"
-    },
+    "markdown-preview-enhanced.previewMode": "Multiple Previews",
     "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.tabCloseButton": "right",
     "workbench.editor.showTabs": "multiple",
     "workbench.editor.tabActionLocation": "right",
     "workbench.editor.limit.enabled": true,
@@ -37,13 +34,7 @@
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 3,
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-    },
-    "github.copilot.editor.enableAutoCompletions": false
+    "markdown.preview.openMarkdownLinks": "inEditor",
 	"files.exclude": {
         "**/.git": false,
         "**/.svn": true,
@@ -52,5 +43,27 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true
     },
-	"editor.inlayHints.enabled": "off"
+    "logFileHighlighter.customPatterns": [
+        {
+            "pattern": "^Conversation Log of .*?$",
+            "foreground": "#A6E22E",
+            "fontStyle": "bold"
+        },
+        {
+            "pattern": "^-{50,}\\s*$",
+            "foreground": "#888888"
+        },
+        {
+            "pattern": "^\\[USER\\]",
+            "foreground": "#50FA7B",
+            "fontStyle": "bold"
+        },
+        {
+            "pattern": "^\\[ASSISTANT\\]",
+            "foreground": "#FF5555",
+            "fontStyle": "bold"
+        },
+    ],
+    "editor.inlayHints.enabled": "off"
 }
+
