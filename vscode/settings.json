@@ -33,7 +33,8 @@
 
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 3,
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "markdown-preview-enhanced.codeBlockTheme": "xonokai.css",
     "markdown.preview.openMarkdownLinks": "inEditor",
 	"files.exclude": {
         "**/.git": false,
