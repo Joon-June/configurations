@@ -10,6 +10,37 @@
                 "echo": false,
                 "panel": "shared"
             }
+        },
+        {
+            "label": "git-sync",
+            "type": "shell",
+            "command": "git fetch origin --prune && (git fetch origin main:main 2>/dev/null; true)",
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "git-rebase-onto-main",
+            "type": "shell",
+            "command": "git stash push -q -m 'git-rebase-auto' --include-untracked; git rebase main; git stash list | head -1 | grep -q 'git-rebase-auto' && git stash pop -q",
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "git-push-force",
+            "type": "shell",
+            "command": "git push --force-with-lease",
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "panel": "shared"
+            }
         }
     ]
 }
+
