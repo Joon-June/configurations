@@ -24,7 +24,7 @@
         {
             "label": "git-rebase-onto-main",
             "type": "shell",
-            "command": "git stash push -q -m 'git-rebase-auto' --include-untracked; git rebase main; git stash list | head -1 | grep -q 'git-rebase-auto' && git stash pop -q",
+            "command": "git stash push -q -m 'git-rebase-auto' --include-untracked; tagfile=$(mktemp); for t in $(git tag --merged HEAD --no-merged main 2>/dev/null); do printf '%s\\t%s\\n' \"$t\" \"$(git log -1 --format='%s' \"$t\")\" >> \"$tagfile\"; done; git rebase main; while IFS=$'\\t' read -r tag subj; do new=$(git log --format='%H' -F --grep=\"$subj\" -1 main..HEAD 2>/dev/null); [ -n \"$new\" ] && git tag -f \"$tag\" \"$new\"; done < \"$tagfile\"; rm -f \"$tagfile\"; git stash list | head -1 | grep -q 'git-rebase-auto' && git stash pop -q",
             "presentation": {
                 "reveal": "never",
                 "echo": false,
@@ -34,7 +34,7 @@
         {
             "label": "git-push-force",
             "type": "shell",
-            "command": "git push --force-with-lease",
+            "command": "git push --force-with-lease && git push --tags --force",
             "presentation": {
                 "reveal": "never",
                 "echo": false,
