@@ -11,6 +11,13 @@
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "ryu1kn.partial-diff",   
-		"mechatroner.rainbow-csv"
+		"mechatroner.rainbow-csv",
+        "emilast.LogFileHighlighter",
+        "ms-toolsai.jupyter",
+        "donjayamanne.githistory",
+        "equinusocio.vsc-material-theme-icons",
+        "AdamViola.parquet-explorer",
+        "KevinRose.vsc-python-indent",
 	]
 }
+
