@@ -73,12 +73,16 @@
     },
     // uppercase
     {
-        "key": "cmd+u",
+        "key": "cmd+shift+u",
         "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "-workbench.action.gotoLine"
     },
     // lowercase
     {
-        "key": "cmd+l",
+        "key": "cmd+shift+l",
         "command": "editor.action.transformToLowercase"
     },
     // go forwarfd
@@ -135,15 +139,6 @@
         "key": "cmd+[",
         "command": "-editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
-    },
-    // go to line
-    {
-        "key": "shift+cmd+l",
-        "command": "workbench.action.gotoLine"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
     },
     // copy active file path
     {
