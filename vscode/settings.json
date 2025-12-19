@@ -66,6 +66,8 @@
             "fontStyle": "bold"
         },
     ],
-    "editor.inlayHints.enabled": "off"
+    "editor.inlayHints.enabled": "off",
+    "chatgpt.commentCodeLensEnabled": false,
+    "python.languageServer": "None",
 }
 
