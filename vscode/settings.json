@@ -68,5 +68,7 @@
     ],
     "editor.inlayHints.enabled": "off",
     "chatgpt.commentCodeLensEnabled": false,
+    "cursor.chat.enableCoAuthoredByTrailer": false,
+    "diffviewer.colorScheme": "dark"
 }
 
