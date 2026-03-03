@@ -4,7 +4,7 @@
         {
             "label": "ruff",
             "type": "shell",
-            "command": "source ${HOME}/.zshrc; conda activate base; ruff check --fix ${file}; ruff format ${file}",
+            "command": "source /home/blux/workspace/joon/blux-ml/.venv/bin/activate; ruff check --fix ${file}; ruff format ${file}",
             "presentation": {
                 "reveal": "never",
                 "echo": false,
@@ -38,6 +38,40 @@
             "presentation": {
                 "reveal": "never",
                 "echo": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "copy-file-ref",
+            "type": "shell",
+            "command": "bash ~/.claude/copy-file-ref.sh '${relativeFile}' ${lineNumber}",
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "focus": false
+            }
+        },
+        {
+            "label": "copy-file-path-ref",
+            "type": "shell",
+            "command": "bash ~/.claude/copy-file-ref.sh '${relativeFile}'",
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "focus": false
+            }
+        },
+        {
+            "label": "git-fix-orphaned-tags",
+            "type": "shell",
+            "command": "git fetch origin main:main --tags; for tag in $(git tag --no-merged main 2>/dev/null); do subj=$(git log -1 --format='%s' \"$tag\" 2>/dev/null); new=$(git log --format='%H' -F --grep=\"$subj\" -1 main 2>/dev/null); if [ -n \"$new\" ]; then echo \"Moving $tag -> ${new:0:7}\"; git tag -f \"$tag\" \"$new\"; git push origin -f \"refs/tags/$tag\"; fi; done",
+            "presentation": {
+                "reveal": "always",
+                "echo": true,
                 "panel": "shared"
             }
         }
