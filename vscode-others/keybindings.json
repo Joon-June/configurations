@@ -142,7 +142,7 @@
     },
     // copy active file path
     {
-        "key": "alt+cmd+c",
+        "key": "shift+cmd+c",
         "command": "copyFilePath",
         "when": "editorFocus"
     },
@@ -408,7 +408,7 @@
     // }
     {
         "key": "cmd+i",
-        "command": "composer.openChatAsEditor"
+        "command": "-composer.openChatAsEditor"
     },
     {
         "key": "cmd+g",
@@ -421,7 +421,7 @@
     },
     {
         "key": "cmd+i",
-        "command": "composerMode.agent"
+        "command": "-composerMode.agent"
     },
     {
         "key": "ctrl+`",
@@ -485,5 +485,68 @@
         "key": "cmd+alt+;",
         "command": "workbench.action.tasks.runTask",
         "args": "git-push-force"
+    },
+    // Claude Code: Cmd+I to toggle focus
+    {
+        "key": "cmd+i",
+        "command": "claude-vscode.focus",
+        "when": "editorTextFocus && !config.claudeCode.useTerminal"
+    },
+    {
+        "key": "cmd+escape",
+        "command": "-claude-vscode.focus",
+        "when": "editorTextFocus && !config.claudeCode.useTerminal"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "copyRelativeFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "-copyRelativeFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "copyRelativeFilePath",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+r shift+alt+cmd+c",
+        "command": "-copyRelativeFilePath",
+        "when": "editorFocus"
+    },
+    // Claude Code: Cmd+I to blur (toggle back to editor)
+    {
+        "key": "cmd+i",
+        "command": "claude-vscode.blur",
+        "when": "!editorTextFocus && !config.claudeCode.useTerminal"
+    },
+    // Claude Code: Cmd+T for new conversation (when Claude is focused)
+    {
+        "key": "cmd+n",
+        "command": "-claude-vscode.newConversation",
+        "when": "config.claudeCode.enableNewConversationShortcut && (activeWebviewPanelId == 'claudeVSCodePanel' || (claude-vscode.sideBarActive && !editorFocus && !panelFocus))"
+    },
+    {
+        "key": "cmd+t",
+        "command": "claude-vscode.newConversation",
+        "when": "config.claudeCode.enableNewConversationShortcut && (activeWebviewPanelId == 'claudeVSCodePanel' || (claude-vscode.sideBarActive && !editorFocus && !panelFocus))"
+    },
+    // Claude Code: Cmd+L for @-mention reference (disable Cursor chat)
+    {
+        "key": "alt+k",
+        "command": "-claude-vscode.insertAtMention",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "-aichat.newchataction"
+    },
+    {
+        "key": "cmd+l",
+        "command": "claude-vscode.insertAtMention",
+        "when": "editorTextFocus"
     },
 ]
