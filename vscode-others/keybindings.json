@@ -509,8 +509,23 @@
     },
     {
         "key": "shift+cmd+c",
-        "command": "copyRelativeFilePath",
-        "when": "editorFocus"
+        "command": "workbench.action.tasks.runTask",
+        "args": "copy-file-path-ref",
+        "when": "editorFocus && !editorHasSelection"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "editor.action.clipboardCopyAction",
+                {
+                    "command": "workbench.action.tasks.runTask",
+                    "args": "copy-file-ref"
+                }
+            ]
+        },
+        "when": "editorFocus && editorHasSelection"
     },
     {
         "key": "cmd+r shift+alt+cmd+c",
@@ -543,6 +558,15 @@
     {
         "key": "cmd+l",
         "command": "-aichat.newchataction"
+    },
+    {
+        "key": "cmd+l",
+        "command": "-aichat.opensidebar"
+    },
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
     },
     {
         "key": "cmd+l",
