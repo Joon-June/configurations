@@ -69,6 +69,13 @@
     "editor.inlayHints.enabled": "off",
     "chatgpt.commentCodeLensEnabled": false,
     "cursor.chat.enableCoAuthoredByTrailer": false,
-    "diffviewer.colorScheme": "dark"
+    "diffviewer.colorScheme": "dark",
+	"claudeCode.initialPermissionMode": "bypassPermissions",
+    "claudeCode.allowDangerouslySkipPermissions": true,
+    "claudeCode.respectGitIgnore": false,
+    "claudeCode.enableNewConversationShortcut": true,
+    "claudeCode.hideOnboarding": true,
+    "claudeCode.useTerminal": true,
+    "claudeCode.autosave": true
 }
 
