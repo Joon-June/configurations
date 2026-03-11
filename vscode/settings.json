@@ -11,17 +11,18 @@
     "editor.suggest.showWords": false,
     "editor.suggest.showKeywords": false,
 
+    "workbench.panel.defaultLocation": "right",
     "workbench.colorTheme": "Monokai Pro (Filter Machine)",
     "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
     "markdown-preview-enhanced.previewMode": "Multiple Previews",
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.showTabs": "multiple",
-    "workbench.editor.tabActionLocation": "right",
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 7,
+    "workbench.editor.limit.value": 9,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.revealIfOpen": true,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.openSideBySideDirection":"right",
 
     "python.formatting.provider": "none",
     "ruff.importStrategy": "fromEnvironment",
@@ -70,12 +71,13 @@
     "chatgpt.commentCodeLensEnabled": false,
     "cursor.chat.enableCoAuthoredByTrailer": false,
     "diffviewer.colorScheme": "dark",
-	"claudeCode.initialPermissionMode": "bypassPermissions",
+    "claudeCode.initialPermissionMode": "bypassPermissions",
     "claudeCode.allowDangerouslySkipPermissions": true,
     "claudeCode.respectGitIgnore": false,
     "claudeCode.enableNewConversationShortcut": true,
     "claudeCode.hideOnboarding": true,
-    "claudeCode.useTerminal": true,
-    "claudeCode.autosave": true
+    "claudeCode.useTerminal": false,
+    "claudeCode.autosave": true,
+    "git-graph.maxDepthOfRepoSearch": 1
 }
 
