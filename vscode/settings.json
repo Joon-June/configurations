@@ -79,6 +79,6 @@
     "claudeCode.useTerminal": false,
     "claudeCode.autosave": true,
     "git-graph.maxDepthOfRepoSearch": 1,
-    "git-graph.fetchAndPrune": true
+    "git-graph.repository.fetchAndPrune": true
 }
 
