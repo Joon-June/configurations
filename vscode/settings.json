@@ -37,6 +37,9 @@
     "markdown-preview-enhanced.previewTheme": "atom-dark.css",
     "markdown-preview-enhanced.codeBlockTheme": "xonokai.css",
     "markdown.preview.openMarkdownLinks": "inEditor",
+	"files.associations": {
+        ".env.*": "properties"
+    },
 	"files.exclude": {
         "**/.git": false,
         "**/.svn": true,
