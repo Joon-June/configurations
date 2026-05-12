@@ -1,0 +1,88 @@
+model = "gpt-5.5"
+project_doc_fallback_filenames = ["CLAUDE.md"]
+project_doc_max_bytes = 65536
+
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+
+model_reasoning_effort = "high"
+plan_mode_reasoning_effort = "xhigh"
+notice.hide_full_access_warning = true
+
+[features]
+hooks = true
+
+# Mirror of the monorepo's Claude Code hooks (the Claude hooks themselves live in
+# blux-monorepo/.claude/ and ~/.claude/ -- these are the Codex-side equivalents).
+# SessionStart: keep `main` fresh across all monorepo sub-repos.
+[[hooks.SessionStart]]
+[[hooks.SessionStart.hooks]]
+type = "command"
+command = "/Users/joonsu/workspace/blux-monorepo/.claude/hooks/refresh-main.sh"
+timeout = 60
+
+# UserPromptSubmit: detect BLX-N issue IDs, inject issue context, auto-flip backlog/todo -> in-progress.
+[[hooks.UserPromptSubmit]]
+[[hooks.UserPromptSubmit.hooks]]
+type = "command"
+command = "uv run --no-project --python 3.12 python /Users/joonsu/.codex/hooks/blx-issue-detect.py"
+timeout = 30
+
+# Stop (end of turn): in blux-ml only, ruff --fix + format changed .py files and `uv lock` if pyproject.toml changed.
+# (Codex's apply_patch tool isn't reliably hookable per-edit, so this runs over the working-tree diff instead of per-file.)
+[[hooks.Stop]]
+[[hooks.Stop.hooks]]
+type = "command"
+command = "/Users/joonsu/.codex/hooks/blux-ml-post-turn-lint.sh"
+timeout = 120
+
+[marketplaces.openai-bundled]
+last_updated = "2026-05-12T06:38:23Z"
+source_type = "local"
+source = "/Users/joonsu/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.blux]
+last_updated = "2026-05-12T06:38:24Z"
+last_revision = "3a004455ddd228af836a2aa0482c32861a765868"
+source_type = "git"
+source = "https://github.com/zaikorea/blux-agent-plugin.git"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-05-12T06:39:45Z"
+source_type = "local"
+source = "/Users/joonsu/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[projects."/Users/joonsu/workspace/blux-monorepo"]
+trust_level = "trusted"
+
+[tui]
+notifications = true
+notification_method = "bel"
+notification_condition = "always"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[plugins."browser-use@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."blux-agent-plugin@blux"]
+enabled = true
+
+[projects."/Users/joonsu/workspace/blux-monorepo/blux"]
+trust_level = "trusted"
+
+[projects."/Users/joonsu/workspace/blux-monorepo/blux-ml"]
+trust_level = "trusted"
+
+[projects."/Users/joonsu/workspace/blux-architecture"]
+trust_level = "trusted"
