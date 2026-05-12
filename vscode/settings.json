@@ -82,6 +82,34 @@
     "claudeCode.useTerminal": false,
     "claudeCode.autosave": true,
     "git-graph.maxDepthOfRepoSearch": 1,
-    "git-graph.repository.fetchAndPrune": true
-}
+    "git-graph.repository.fetchAndPrune": true,
+    "terminal.integrated.focusAfterRun": "none",
 
+    "git.openDiffOnClick": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.graph.defaultItemLimit": 150,
+    "gitlens.graph.pageItemLimit": 100,
+    "gitlens.graph.minimap.enabled": false,
+    "gitlens.graph.scrollMarkers.enabled": false,
+    "gitlens.graph.pullRequests.enabled": false,
+    "gitlens.graph.issues.enabled": false,
+    "gitlens.graph.avatars": true,
+    "gitlens.graph.statusBar.enabled": false,
+    "gitlens.graph.dimMergeCommits": true,
+    "gitlens.graph.highlightRowsOnRefHover": true,
+    "gitlens.graph.showGhostRefsOnRowHover": false,
+    "workbench.colorCustomizations": {
+        "gitlens.graphLane1Color": "#3b9eff",
+        "gitlens.graphLane2Color": "#ff5fb0",
+        "gitlens.graphLane3Color": "#5ccb5f",
+        "gitlens.graphLane4Color": "#ffab2e",
+        "gitlens.graphLane5Color": "#b07cff",
+        "gitlens.graphLane6Color": "#ff6b6b",
+        "gitlens.graphLane7Color": "#36d6e7",
+        "gitlens.graphLane8Color": "#d4e157",
+        "gitlens.graphLane9Color": "#ff8a5c",
+        "gitlens.graphLane10Color": "#7c8cff"
+    }
+}
