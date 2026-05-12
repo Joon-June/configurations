@@ -84,6 +84,7 @@
     "git-graph.maxDepthOfRepoSearch": 1,
     "git-graph.repository.fetchAndPrune": true,
     "terminal.integrated.focusAfterRun": "none",
+    "task.allowAutomaticTasks": "on",
 
     "git.openDiffOnClick": true,
     "gitlens.codeLens.enabled": false,
