@@ -1,149 +1,55 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Plugins
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# Completion: tab cycles through candidates with menu selection
+autoload -Uz compinit && compinit
+zmodload zsh/complist
+zstyle ':completion:*' menu select
+bindkey -M menuselect '\e[Z' reverse-menu-complete
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Up/Down arrow: prefix-based history search
+autoload -U up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
+bindkey '^[OA' up-line-or-beginning-search
+bindkey '^[OB' down-line-or-beginning-search
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# Accept autosuggestion with Tab, fall back to completion if no suggestion
+# First tab shows candidates, second tab starts cycling through them
+autosuggest-accept-or-complete() {
+    if [[ -n "$POSTDISPLAY" ]]; then
+        zle autosuggest-accept
+    else
+        zle expand-or-complete
+    fi
+}
+zle -N autosuggest-accept-or-complete
+bindkey '\t' autosuggest-accept-or-complete
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# Treat only alphanumerics as word characters (stop at /, -, etc.)
+WORDCHARS=''
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# Option+Delete to delete previous word
+bindkey '\e\x7f' backward-kill-word
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias ca='conda activate'
-alias cc='conda create'
-alias ce='conda env'
-
+# Aliases
 alias jj='ssh joon@joonjune.iptime.org'
 alias py='python'
 alias st=streamlit
-alias sv212='ssh -i /Users/joonsu/workspace/learners/learners.pem learners@192.168.0.212 -p 22'
-alias sv213='ssh learners@192.168.0.213 -p 22'
-alias svd212='ssh root@192.168.0.212 -p 4009'
-alias svd213='ssh root@192.168.0.213 -p 4009'
 
-POWERLEVEL9K_CUSTOM_INFO='echo LOCAL'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda custom_info)
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/joonsu/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/joonsu/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/joonsu/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/joonsu/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-alias jn="jupyter notebook" 
+alias jn="jupyter notebook"
 
 function gitp() {
     git add "$1"
@@ -161,7 +67,51 @@ alias ga="git add"
 alias gp="git push"
 
 alias ngrok="/Users/joonsu/Downloads/ngrok"
-alias cdconf="cd /Users/joonsu/workspace/personal/configurations"
+alias cdconf="cd /Users/joonsu/main/personal/workspace/configurations"
+
+alias adb="/Users/joonsu/Library/Android/sdk/platform-tools/adb"
+alias cdblux="cd /Users/joonsu/main/works/blux/workspace"
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+
+eval "$(zoxide init zsh)"
+
+alias ngrok="/opt/homebrew/bin/ngrok"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+alias ls='lsd'
+alias ll='ls -alhF'
+alias lt='ls --tree'
+
+. "$HOME/.local/bin/env"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+alias c="claude --allow-dangerously-skip-permissions --remote-control"
+alias crf="c --fork-session --resume"
+alias ur="uv run python"
+
+# Starship prompt (keep at end)
+eval "$(starship init zsh)"
+
+# sentry
+fpath=("/Users/joonsu/.local/share/zsh/site-functions" $fpath)
+
+# Blux CLI completion
+eval "$(_BX_COMPLETE=zsh_source bx)"
+
+# Blux CLI shared secrets — lazy load on first bx call (not at shell start).
+# Skips `bx secrets ...` itself to avoid recursing through the wrapper.
+bx() {
+  if [[ "$1" != "secrets" && -z "$_BX_SECRETS_LOADED_GUARD" ]]; then
+    eval "$(command bx secrets export 2>/dev/null)"
+    export _BX_SECRETS_LOADED_GUARD=1
+  fi
+  command bx "$@"
+}
+
+export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
+alias tig="tig --all"
