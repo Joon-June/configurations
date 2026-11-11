@@ -49,6 +49,10 @@
         "**/Thumbs.db": true,
         "**/__pycache__": true
     },
+    "files.watcherExclude": {
+        "**/.claude/worktrees/**": true,
+        "**/node_modules/**": true
+    },
     "logFileHighlighter.customPatterns": [
         {
             "pattern": "^Conversation Log of .*?$",
